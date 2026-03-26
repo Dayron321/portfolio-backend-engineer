@@ -23,7 +23,7 @@ const skills = [
     icon: ShieldCheck,
     label: "Testing & QA Automation",
     color: "magenta",
-    desc: "E2E test suites with Playwright, functional testing against user stories, and Postman API validation.",
+    desc: "E2E test automation frameworks, functional UI testing, and Postman API validation.",
   },
   {
     icon: Cloud,
@@ -53,7 +53,7 @@ const approach = [
 ];
 
 const focus = [
-  "Advanced Playwright automation patterns",
+  "Advanced E2E Test Automation architectures",
   "Serverless GCP deployments at scale",
   "Event-driven microservices architecture",
   "CI/CD pipeline automation & IaC",
@@ -106,7 +106,7 @@ export default function About() {
                 Backend engineer with a QA-first mindset. I specialize in validating software logic against
                 strict acceptance criteria — before and after ship. With solid experience building REST APIs,
                 writing complex SQL validations, and operating in CI/CD environments, I close the gap between
-                development and quality. My toolbox includes Playwright for E2E automation and GCP for
+                development and quality. My toolbox includes <span translate="no" className="font-semibold text-[#c400ff] mx-1">Playwright</span> for E2E automation and GCP for
                 resilient, scalable deployments.
               </p>
             </div>

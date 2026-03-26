@@ -114,7 +114,7 @@ export default function Testing() {
             Tests in This Portfolio
           </h2>
           <p className="text-sm text-[#aab2cc] max-w-xl mx-auto leading-relaxed">
-            This site includes Playwright E2E tests validating the homepage load and main navigation.
+            This site includes <span translate="no" className="font-semibold text-[#00ff88]">Playwright</span> E2E tests validating the homepage load and main navigation.
             Source:{" "}
             <code className="text-[#00d4ff]" style={{ fontFamily: "var(--font-mono)" }}>
               tests/portfolio.spec.ts
