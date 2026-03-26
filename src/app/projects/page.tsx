@@ -43,29 +43,46 @@ const projects = [
     role: "QA Engineer / Independent Setup",
     context: "Personal Architecture Project",
     complexity: "Intermediate–Advanced",
-    shortDescription: "Playwright automation suite replacing manual UI flows, integrated into CI/CD.",
+    shortDescription: "Robust UI automation suite replacing manual flows, deeply integrated into CI/CD.",
     problem: "Manual testing of complex user flows took hours per release, creating bottlenecks and regression risk.",
-    solution: "Architected a scalable E2E framework using Playwright + Node.js with Page Object Model and Codegen-based selectors.",
+    solution: "Architected a scalable E2E framework using Node.js with Page Object Model and Codegen-based selectors.",
     impact: "Full suite runs in under 3 minutes, catching critical bugs before every deployment.",
     metrics: [
       "Reduced manual testing time by ~85%",
       "Increased core flow coverage to 90%+",
       "Automated execution on every Pull Request",
     ],
-    tech: ["Playwright", "Node.js", "TypeScript", "GitHub Actions"],
+    tech: ["QA Frameworks", "Node.js", "TypeScript", "GitHub Actions"],
     icon: Terminal,
     architectureDiagram: (
-      <div className="flex flex-row items-center justify-center gap-3 text-xs overflow-x-auto">
-        <div className="border border-slate-700 bg-slate-900 rounded-sm p-2 text-center text-[#00d4ff] whitespace-nowrap">
-          CI/CD Pipeline<br /><span className="text-slate-500">GitHub Actions</span>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-3xl mx-auto py-2" style={{ fontFamily: "var(--font-mono)" }}>
+        <div className="w-full md:w-32 flex-shrink-0 border border-slate-700 bg-[rgba(15,23,42,0.8)] rounded-sm p-3 text-center text-[#00d4ff] shadow-sm">
+          <div className="text-[10px] font-bold mb-1 opacity-70 tracking-widest uppercase">Pipeline</div>
+          <span className="text-[11px] text-slate-300">GitHub Actions</span>
         </div>
-        <span className="text-slate-600">→</span>
-        <div className="border border-[rgba(0,212,255,0.3)] bg-[rgba(0,212,255,0.05)] rounded-sm p-2 text-center text-[#00d4ff] whitespace-nowrap">
-          Test Runner<br /><span className="text-slate-500">Playwright / Node</span>
+        
+        <div className="flex flex-col md:flex-row items-center opacity-40">
+          <div className="h-4 w-[1px] md:h-[1px] md:w-6 bg-[#00d4ff]" />
+          <div className="transform rotate-90 md:rotate-0 -translate-y-1 md:translate-y-0 md:-translate-x-1">
+            <ChevronDown size={14} className="text-[#00d4ff]" />
+          </div>
         </div>
-        <span className="text-slate-600">→</span>
-        <div className="border border-slate-700 bg-slate-900 rounded-sm p-2 text-center text-[#00d4ff] whitespace-nowrap">
-          Staging Env<br /><span className="text-slate-500">Target App</span>
+
+        <div className="w-full md:w-40 flex-shrink-0 border border-[rgba(0,212,255,0.4)] bg-[rgba(0,212,255,0.08)] rounded-sm p-3 text-center text-[#00d4ff] relative shadow-[0_0_15px_rgba(0,212,255,0.15)]">
+          <div className="text-[10px] font-bold mb-1 opacity-90 tracking-widest uppercase">Core Suite</div>
+          <span className="text-[11px] text-[#eef2ff]" translate="no">Node / Playwright</span>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center opacity-40">
+          <div className="h-4 w-[1px] md:h-[1px] md:w-6 bg-[#00d4ff]" />
+          <div className="transform rotate-90 md:rotate-0 -translate-y-1 md:translate-y-0 md:-translate-x-1">
+            <ChevronDown size={14} className="text-[#00d4ff]" />
+          </div>
+        </div>
+
+        <div className="w-full md:w-32 flex-shrink-0 border border-slate-700 bg-[rgba(15,23,42,0.8)] rounded-sm p-3 text-center text-[#00d4ff] shadow-sm">
+          <div className="text-[10px] font-bold mb-1 opacity-70 tracking-widest uppercase">Target</div>
+          <span className="text-[11px] text-slate-300">Staging Env</span>
         </div>
       </div>
     ),
@@ -109,17 +126,34 @@ test.describe('Authentication Flows', () => {
     tech: ["Python", "REST APIs", "PostgreSQL", "Pandas"],
     icon: Server,
     architectureDiagram: (
-      <div className="flex flex-row items-center justify-center gap-3 text-xs overflow-x-auto">
-        <div className="border border-slate-700 bg-slate-900 rounded-sm p-2 text-center text-[#00ff88] whitespace-nowrap">
-          Cron Trigger<br /><span className="text-slate-500">Scheduler</span>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-3xl mx-auto py-2" style={{ fontFamily: "var(--font-mono)" }}>
+        <div className="w-full md:w-32 flex-shrink-0 border border-slate-700 bg-[rgba(15,23,42,0.8)] rounded-sm p-3 text-center text-[#00ff88] shadow-sm">
+          <div className="text-[10px] font-bold mb-1 opacity-70 tracking-widest uppercase">Trigger</div>
+          <span className="text-[11px] text-slate-300">Task Scheduler</span>
         </div>
-        <span className="text-slate-600">→</span>
-        <div className="border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.05)] rounded-sm p-2 text-center text-[#00ff88] whitespace-nowrap">
-          Python Worker<br /><span className="text-slate-500">API Gateway</span>
+        
+        <div className="flex flex-col md:flex-row items-center opacity-40">
+          <div className="h-4 w-[1px] md:h-[1px] md:w-6 bg-[#00ff88]" />
+          <div className="transform rotate-90 md:rotate-0 -translate-y-1 md:translate-y-0 md:-translate-x-1">
+            <ChevronDown size={14} className="text-[#00ff88]" />
+          </div>
         </div>
-        <span className="text-slate-600">→</span>
-        <div className="border border-slate-700 bg-slate-900 rounded-sm p-2 text-center text-[#00ff88] whitespace-nowrap">
-          Database<br /><span className="text-slate-500">PostgreSQL</span>
+
+        <div className="w-full md:w-40 flex-shrink-0 border border-[rgba(0,255,136,0.4)] bg-[rgba(0,255,136,0.08)] rounded-sm p-3 text-center text-[#00ff88] relative shadow-[0_0_15px_rgba(0,255,136,0.15)]">
+          <div className="text-[10px] font-bold mb-1 opacity-90 tracking-widest uppercase">Worker</div>
+          <span className="text-[11px] text-[#eef2ff]">Python Processor</span>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center opacity-40">
+          <div className="h-4 w-[1px] md:h-[1px] md:w-6 bg-[#00ff88]" />
+          <div className="transform rotate-90 md:rotate-0 -translate-y-1 md:translate-y-0 md:-translate-x-1">
+            <ChevronDown size={14} className="text-[#00ff88]" />
+          </div>
+        </div>
+
+        <div className="w-full md:w-32 flex-shrink-0 border border-slate-700 bg-[rgba(15,23,42,0.8)] rounded-sm p-3 text-center text-[#00ff88] shadow-sm">
+          <div className="text-[10px] font-bold mb-1 opacity-70 tracking-widest uppercase">Storage</div>
+          <span className="text-[11px] text-slate-300">PostgreSQL Cloud</span>
         </div>
       </div>
     ),
@@ -165,17 +199,34 @@ test.describe('Authentication Flows', () => {
     tech: ["GCP", "Docker", "Terraform", "Cloud Build"],
     icon: Cloud,
     architectureDiagram: (
-      <div className="flex flex-row items-center justify-center gap-3 text-xs overflow-x-auto">
-        <div className="border border-slate-700 bg-slate-900 rounded-sm p-2 text-center text-blue-400 whitespace-nowrap">
-          VCS Merge<br /><span className="text-slate-500">main branch</span>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-3xl mx-auto py-2" style={{ fontFamily: "var(--font-mono)" }}>
+        <div className="w-full md:w-32 flex-shrink-0 border border-slate-700 bg-[rgba(15,23,42,0.8)] rounded-sm p-3 text-center text-blue-400 shadow-sm">
+          <div className="text-[10px] font-bold mb-1 opacity-70 tracking-widest uppercase">VCS</div>
+          <span className="text-[11px] text-slate-300">GitHub Repo</span>
         </div>
-        <span className="text-slate-600">→</span>
-        <div className="border border-slate-700 bg-slate-900 rounded-sm p-2 text-center text-blue-400 whitespace-nowrap">
-          Cloud Build<br /><span className="text-slate-500">Docker build</span>
+        
+        <div className="flex flex-col md:flex-row items-center opacity-40">
+          <div className="h-4 w-[1px] md:h-[1px] md:w-6 bg-blue-400" />
+          <div className="transform rotate-90 md:rotate-0 -translate-y-1 md:translate-y-0 md:-translate-x-1">
+            <ChevronDown size={14} className="text-blue-400" />
+          </div>
         </div>
-        <span className="text-slate-600">→</span>
-        <div className="border border-[rgba(59,130,246,0.3)] bg-[rgba(59,130,246,0.05)] rounded-sm p-2 text-center text-blue-400 whitespace-nowrap">
-          Cloud Run<br /><span className="text-slate-500">Serverless</span>
+
+        <div className="w-full md:w-40 flex-shrink-0 border border-slate-700 bg-[rgba(15,23,42,0.8)] rounded-sm p-3 text-center text-blue-400 shadow-sm">
+          <div className="text-[10px] font-bold mb-1 opacity-70 tracking-widest uppercase">Build</div>
+          <span className="text-[11px] text-slate-300">Cloud Build</span>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center opacity-40">
+          <div className="h-4 w-[1px] md:h-[1px] md:w-6 bg-blue-400" />
+          <div className="transform rotate-90 md:rotate-0 -translate-y-1 md:translate-y-0 md:-translate-x-1">
+            <ChevronDown size={14} className="text-blue-400" />
+          </div>
+        </div>
+
+        <div className="w-full md:w-32 flex-shrink-0 border border-[rgba(59,130,246,0.4)] bg-[rgba(59,130,246,0.08)] rounded-sm p-3 text-center text-blue-400 relative shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+          <div className="text-[10px] font-bold mb-1 opacity-90 tracking-widest uppercase">Service</div>
+          <span className="text-[11px] text-[#eef2ff]">Cloud Run</span>
         </div>
       </div>
     ),
@@ -361,7 +412,7 @@ export default function Projects() {
                             <div>
                               <h3 className="text-xs uppercase tracking-widest text-[#4a5568] mb-4 flex items-center gap-2"
                                 style={{ fontFamily: "var(--font-mono)" }}>
-                                <Layers size={14} /> Architecture Flow
+                                <Layers size={14} /> Flujo de arquitectura
                               </h3>
                               <div className="rounded-sm p-6 overflow-x-auto"
                                 style={{ background: "rgba(8,8,22,0.9)", border: "1px solid rgba(255,255,255,0.07)" }}>

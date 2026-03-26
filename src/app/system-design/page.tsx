@@ -303,7 +303,7 @@ export default function SystemDesign() {
               ["PostgreSQL", "#7b44ff"],
               ["Redis",      "#f97316"],
               ["Next.js",    "#00d4ff"],
-              ["Playwright", "#00ff88"],
+              ["E2E Testing", "#00ff88"],
               ["GitHub Actions", "#c400ff"],
             ].map(([tech, color]) => (
               <span
@@ -357,7 +357,7 @@ export default function SystemDesign() {
           <PrincipleCard
             icon={GitBranch}
             title="Test-Gated Pipeline"
-            desc="Playwright E2E and unit tests block every merge to main. No deployment without a green pipeline."
+            desc="E2E test automation frameworks and unit tests block every merge to main. No deployment without a green pipeline."
             color="#7b44ff"
             delay={1.7}
           />

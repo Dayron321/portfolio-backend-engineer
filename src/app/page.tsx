@@ -145,7 +145,9 @@ export default function Home() {
 
             {/* Code body */}
             <div className="p-6 text-sm leading-relaxed overflow-x-auto" style={{ fontFamily: "var(--font-mono)" }}>
-              <pre><code dangerouslySetInnerHTML={{ __html: `<span class="text-[#c400ff]">import</span> { <span class="text-[#00d4ff]">Test</span>, <span class="text-[#00d4ff]">Expect</span> } <span class="text-[#c400ff]">from</span> <span class="text-[#00ff88]">"qa-agent"</span>;
+              <pre><code 
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{ __html: `<span class="text-[#c400ff]">import</span> { <span class="text-[#00d4ff]">Test</span>, <span class="text-[#00d4ff]">Expect</span> } <span class="text-[#c400ff]">from</span> <span class="text-[#00ff88]">"qa-agent"</span>;
 <span class="text-[#c400ff]">import</span> { <span class="text-[#00d4ff]">BackendCore</span> } <span class="text-[#c400ff]">from</span> <span class="text-[#00ff88]">"@/system/core"</span>;
 
 <span class="text-[#7b44ff]">describe</span>(<span class="text-[#00ff88]">"Production Architecture"</span>, () =&gt; {
@@ -162,7 +164,7 @@ export default function Home() {
     <span class="text-[#00d4ff]">Expect</span>(metrics.latency).<span class="text-[#7b44ff]">toBeLessThan</span>(<span class="text-[#00ff88]">50</span>);
     <span class="text-[#00d4ff]">Expect</span>(metrics.errors).<span class="text-[#7b44ff]">toBe</span>(<span class="text-[#00ff88]">0</span>);
   });
-});` }} /></pre>
+});` }} /> </pre>
             </div>
 
             {/* Bottom status bar */}
