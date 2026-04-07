@@ -5,7 +5,7 @@ import { Server, ShieldCheck, Cloud, Globe } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-[#05050a] relative overflow-hidden">
+    <section id="about" className="py-24 bg-[#111111] relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <motion.div

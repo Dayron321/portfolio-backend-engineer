@@ -48,7 +48,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-[#020205]">
+    <section id="projects" className="py-24 bg-[#0d0d0d]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div>

@@ -5,16 +5,16 @@
 ══════════════════════════════════════════════════ */
 
 :root {
-  --neon-cyan:    #00d4ff;
+  --neon-cyan:    #00b4ff;
   --neon-blue:    #0070f3;
   --neon-magenta: #c400ff;
   --neon-lime:    #00ff88;
-  --bg-void:      #020205;
-  --bg-deep:      #05050a;
-  --bg-glass:     rgba(5, 5, 15, 0.8);
-  --border-glass: rgba(255, 255, 255, 0.05);
-  --border-cyan:  rgba(0, 212, 255, 0.3);
-  --glow-cyan:    0 0 15px rgba(0, 212, 255, 0.4);
+  --bg-void:      #0a0a0a;
+  --bg-deep:      #111111;
+  --bg-glass:     rgba(16, 16, 16, 0.85);
+  --border-glass: rgba(255, 255, 255, 0.06);
+  --border-cyan:  rgba(0, 180, 255, 0.3);
+  --glow-cyan:    0 0 15px rgba(0, 180, 255, 0.35);
 }
 
 /* ── Scrollbar ── */
@@ -31,8 +31,9 @@ html { height: 100%; scroll-behavior: smooth; }
 body {
   height: 100%;
   margin: 0;
-  background: var(--bg-void);
-  color: #f8fafc;
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  background-attachment: fixed;
+  color: #f0f4f8;
   font-family: var(--font-space, 'Inter', sans-serif);
   -webkit-font-smoothing: antialiased;
 }
@@ -40,13 +41,13 @@ body {
 /* ── Grid Background ── */
 .bg-grid {
   background-image: 
-    linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0, 180, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 255, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .bg-radial {
-  background: radial-gradient(circle at 50% 50%, rgba(0, 112, 243, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 112, 243, 0.08) 0%, transparent 70%);
 }
 
 /* ── Glassmorphism ── */
@@ -64,7 +65,7 @@ body {
 
 /* ── Typography Glows ── */
 .text-glow-cyan {
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  text-shadow: 0 0 10px rgba(0, 180, 255, 0.45);
 }
 
 /* ── Corner bracket accent ── */

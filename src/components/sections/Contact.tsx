@@ -13,7 +13,7 @@ const LinkedinIcon = ({ size = 20, className = "" }: { size?: number; className?
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-[#05050a] relative overflow-hidden">
+    <section id="contact" className="py-24 bg-[#0d0d0d] relative overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_100%,rgba(0,112,243,0.08)_0%,transparent_50%)] z-0" />
 
@@ -50,10 +50,10 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ContactMethod
-              icon={<Mail className="text-[#00d4ff]" />}
+              icon={<Mail className="text-[#00b4ff]" />}
               label="Email"
-              value="dayron.vera@example.com"
-              href="mailto:dayron.vera@example.com"
+              value="dayronvc98@gmail.com"
+              href="mailto:dayronvc98@gmail.com"
               delay={0.3}
             />
             <ContactMethod
@@ -88,8 +88,8 @@ export default function Contact() {
               Estoy abierto a discutir nuevos proyectos, arquitectura de software y estrategias de automatización avanzadas.
             </p>
             <a
-              href="mailto:dayron.vera@example.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#00d4ff] text-[#020205] font-bold rounded-sm border border-[#00d4ff] hover:bg-transparent hover:text-[#00d4ff] transition-all duration-300 group"
+              href="mailto:dayronvc98@gmail.com"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#00b4ff] text-[#0a0a0a] font-bold rounded-sm border border-[#00b4ff] hover:bg-transparent hover:text-[#00b4ff] transition-all duration-300 group"
             >
               Contactar Ahora
               <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

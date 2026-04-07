@@ -39,7 +39,7 @@ export default function RootLayout({
       className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-[#020205] text-[#f8fafc] antialiased" suppressHydrationWarning>
+      <body className="bg-[#0a0a0a] text-[#f0f4f8] antialiased" suppressHydrationWarning>
         <Navbar />
         {children}
       </body>

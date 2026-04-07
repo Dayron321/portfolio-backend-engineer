@@ -17,7 +17,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-12 bg-[#020205] border-t border-white/5 relative z-10 overflow-hidden">
+    <footer className="py-12 bg-[#0a0a0a] border-t border-white/5 relative z-10 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
           
@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="flex gap-8">
               <SocialLink icon={<GithubIcon size={20} />} href="https://github.com/Dayron321" />
               <SocialLink icon={<LinkedinIcon size={20} />} href="https://www.linkedin.com/in/dayron-vera-7a7b14211/" />
-              <SocialLink icon={<Mail size={20} />} href="mailto:dayron.vera@example.com" />
+              <SocialLink icon={<Mail size={20} />} href="mailto:dayronvc98@gmail.com" />
             </div>
             <p className="text-[10px] font-mono text-white/20 uppercase tracking-widest">
               © 2026 Portafolio en vivo — Dayron Farid Vera Castro

@@ -5,15 +5,15 @@ import { Briefcase, GraduationCap, Globe2 } from "lucide-react";
 
 const experience = [
   {
-    role: "QA Engineer",
+    role: "QA Engineer / Backend Support",
     company: "Glocation",
-    period: "2024 — Presente",
+    period: "Sep 2025 — Mar 2026",
     description: "Lidero la estrategia de automatización de pruebas para plataformas de logística. Diseño de frameworks Playwright de alto rendimiento y ejecución de pruebas de carga críticas.",
   },
   {
     role: "Backend Developer Intern",
     company: "La Previsora Seguros",
-    period: "2023 — 2024",
+    period: "Ago 2024 — Jul 2025",
     description: "Desarrollo de lógica de servidor y automatización de procesos financieros. Implementación de sistemas de facturación masiva y optimización de bases de datos.",
   },
 ];
@@ -54,7 +54,7 @@ export default function Experience() {
                   transition={{ delay: index * 0.1 }}
                   className="relative"
                 >
-                  <div className="absolute -left-[51px] top-1 w-5 h-5 rounded-full bg-[#05050a] border-2 border-[#00d4ff] flex items-center justify-center">
+                  <div className="absolute -left-[51px] top-1 w-5 h-5 rounded-full bg-[#111111] border-2 border-[#00b4ff] flex items-center justify-center">
                     <Briefcase size={10} className="text-[#00d4ff]" />
                   </div>
                   <div className="mb-2 flex items-center justify-between">

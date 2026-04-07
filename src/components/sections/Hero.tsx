@@ -20,7 +20,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/10 text-[#00d4ff] text-xs font-bold uppercase tracking-wider mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00b4ff]/30 bg-[#00b4ff]/10 text-[#00b4ff] text-xs font-bold uppercase tracking-wider mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-[#00d4ff] animate-pulse shadow-[0_0_8px_#00d4ff]" />
             Open to Work
@@ -36,7 +36,7 @@ export default function Hero() {
               Dayron Farid <br />
               <span className="text-white/40">Vera Castro</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#00d4ff]/80 font-medium tracking-wide mb-8 font-mono">
+            <p className="text-xl md:text-2xl text-[#00b4ff]/80 font-medium tracking-wide mb-8 font-mono">
               Software Engineer — Backend & QA Automation
             </p>
           </motion.div>
@@ -61,7 +61,7 @@ export default function Hero() {
           >
             <button
               onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-8 py-4 bg-[#00d4ff] text-[#020205] font-bold rounded-sm border border-[#00d4ff] hover:bg-transparent hover:text-[#00d4ff] transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="px-8 py-4 bg-[#00b4ff] text-[#0a0a0a] font-bold rounded-sm border border-[#00b4ff] hover:bg-transparent hover:text-[#00b4ff] transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               Ver proyectos
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -80,7 +80,7 @@ export default function Hero() {
       </div>
 
       {/* Decorative Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#020205] to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10" />
     </section>
   );
 }

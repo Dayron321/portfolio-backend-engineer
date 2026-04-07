@@ -36,7 +36,7 @@ export default function CodeDemo() {
   }, []);
 
   return (
-    <section id="demo" className="py-24 bg-[#05050a]">
+    <section id="demo" className="py-24 bg-[#111111]">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
