@@ -67,7 +67,7 @@ export default function Hero() {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <a
-              href="https://portfolio-backend-engineer.vercel.app/cv-dayron-vera.pdf"
+              href="/cv-dayron-vera.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-transparent text-white font-bold rounded-sm border border-white/20 hover:border-[#00d4ff] hover:text-[#00d4ff] transition-all duration-300 flex items-center justify-center gap-2"
