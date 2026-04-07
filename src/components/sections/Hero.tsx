@@ -48,7 +48,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Especialista en arquitecturas robustas, automatización inteligente y despliegues en la nube. 
+            Especialista en arquitecturas robustas, automatización inteligente y despliegues en la nube.
             Transformando pruebas manuales en pipelines CI/CD de alto rendimiento para el software de 2026.
           </motion.p>
 
@@ -67,7 +67,7 @@ export default function Hero() {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <a
-              href="https://portfolio-backend-engineer.vercel.app/H_V_Dayron_Vera.pdf"
+              href="https://portfolio-backend-engineer.vercel.app/cv-dayron-vera.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-transparent text-white font-bold rounded-sm border border-white/20 hover:border-[#00d4ff] hover:text-[#00d4ff] transition-all duration-300 flex items-center justify-center gap-2"
