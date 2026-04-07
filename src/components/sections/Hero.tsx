@@ -33,7 +33,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 text-glow-cyan leading-tight">
-              Dayron Farid <br />
+              Dayron Farid{" "}
               <span className="text-white/40">Vera Castro</span>
             </h1>
             <p className="text-xl md:text-2xl text-[#00b4ff]/80 font-medium tracking-wide mb-8 font-mono">
