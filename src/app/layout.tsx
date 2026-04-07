@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Orbitron, Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import Navbar from "@/components/layout/Navbar";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -25,9 +25,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dayron Vera — Backend Engineer & QA Automation",
+  title: "Dayron Vera | Software Engineer — Backend & QA Automation | Open to Work",
   description:
-    "Portfolio of Dayron Vera — Software Engineer specializing in Backend Development, QA Automation, and Cloud Infrastructure on GCP.",
+    "Official portfolio of Dayron Farid Vera Castro — Software Engineer specializing in Backend Development, QA Automation, CI/CD, and Cloud Infrastructure.",
 };
 
 export default function RootLayout({
@@ -39,8 +39,8 @@ export default function RootLayout({
       className={`${orbitron.variable} ${spaceGrotesk.variable} ${spaceMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-[#050508] text-[#eef2ff] antialiased" suppressHydrationWarning>
-        <Navigation />
+      <body className="bg-[#020205] text-[#f8fafc] antialiased" suppressHydrationWarning>
+        <Navbar />
         {children}
       </body>
     </html>
