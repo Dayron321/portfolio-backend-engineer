@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import { Home, User, Briefcase, TestTube, Server, Mail } from "lucide-react";
 
 const navItems = [
-  { path: "/",             name: "Home",          icon: Home },
-  { path: "/about",        name: "About",          icon: User },
-  { path: "/projects",     name: "Projects",       icon: Briefcase },
-  { path: "/testing",      name: "Testing",        icon: TestTube },
-  { path: "/system-design",name: "System Design",  icon: Server },
-  { path: "/contact",      name: "Contact",        icon: Mail },
+  { path: "/",             name: "Inicio",         icon: Home },
+  { path: "/about",        name: "Sobre mí",       icon: User },
+  { path: "/projects",     name: "Proyectos",      icon: Briefcase },
+  { path: "/testing",      name: "Pruebas",        icon: TestTube },
+  { path: "/system-design",name: "Arquitectura",   icon: Server },
+  { path: "/contact",      name: "Contacto",       icon: Mail },
 ];
 
 export default function Navigation() {

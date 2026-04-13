@@ -23,7 +23,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00b4ff]/30 bg-[#00b4ff]/10 text-[#00b4ff] text-xs font-bold uppercase tracking-wider mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-[#00d4ff] animate-pulse shadow-[0_0_8px_#00d4ff]" />
-            Open to Work
+            Disponible para trabajar
           </motion.div>
 
           {/* Name & Title */}
@@ -68,8 +68,7 @@ export default function Hero() {
             </button>
             <a
               href="/cv-dayron-vera.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              download="cv-dayron-vera.pdf"
               className="px-8 py-4 bg-transparent text-white font-bold rounded-sm border border-white/20 hover:border-[#00d4ff] hover:text-[#00d4ff] transition-all duration-300 flex items-center justify-center gap-2"
             >
               Descargar CV
