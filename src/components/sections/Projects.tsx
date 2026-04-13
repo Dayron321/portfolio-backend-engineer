@@ -1,50 +1,99 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Zap, BarChart3, Cloud } from "lucide-react";
+import { ExternalLink, Zap, BarChart3, Cloud, Shield, Lock, FileCode2, CheckCircle2, Cpu } from "lucide-react";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
 );
-import { CyberCard } from "@/components/ui/CyberCard";
 
-const projects = [
+type ProjectType = {
+  title: string;
+  badge?: string;
+  description: string;
+  confidential?: boolean;
+  tags: string[];
+  github?: string;
+  githubLabel?: string;
+  technicalDoc?: string;
+  demo?: string;
+  stats: { label: string; value: string; icon: React.ReactNode }[];
+  glow: "cyan" | "lime" | "magenta" | "amber";
+};
+
+const projects: ProjectType[] = [
   {
-    title: "E2E & Performance Framework",
-    description: "Diseñé y desarrollé desde cero un framework completo de pruebas automatizadas E2E con Playwright + TypeScript (Page Object Model y Codegen). Construí microservicios backend en Node.js desplegados en Google Cloud Run para ejecución distribuida de pruebas. Configuré pipelines CI/CD con Google Cloud Build + Terraform para despliegues automáticos. Integré pruebas de performance con k6 alcanzando 10.000 requests/segundo (latencia promedio 32 ms) y reportes automáticos. Logré cobertura end-to-end superior al 85% y reducción estimada del 70% en tiempo de pruebas manuales. Tecnologías: Playwright, TypeScript, Node.js, k6, GCP, Terraform, GitHub Actions.",
-    tags: ["Playwright", "k6", "GCP", "Terraform", "Node.js"],
+    title: "Automatización de Facturación – La Previsora Seguros",
+    badge: "Empresa · Producción",
+    description:
+      "Diseñé e implementé un sistema de automatización de facturación en producción para La Previsora Seguros, procesando más de 200 facturas por ejecución con validación de integridad de datos financieros en tiempo real. Reemplazé procesos manuales críticos, eliminando errores humanos y reduciendo el tiempo de procesamiento mensual en más del 80%. El sistema incluye lógica de validación multicapa, generación automática de reportes en Excel y alertas por correo ante inconsistencias detectadas.",
+    confidential: true,
+    tags: ["Python", "SQL", "Pandas", "Excel", "Automation"],
+    technicalDoc: "https://portfolio-backend-engineer.vercel.app/",
+    demo: "https://portfolio-backend-engineer.vercel.app/",
+    stats: [
+      { label: "Facturas/ejecución", value: "200+", icon: <Zap size={14} /> },
+      { label: "Precisión de datos", value: "99.9%", icon: <CheckCircle2 size={14} /> },
+      { label: "Reducción tiempo", value: "80%", icon: <BarChart3 size={14} /> },
+    ],
+    glow: "lime",
+  },
+  {
+    title: "Infraestructura Cloud & DevOps – Microservicios en GCP",
+    badge: "Empresa · Producción",
+    description:
+      "Arquitecté y desplegué infraestructura cloud escalable en Google Cloud Platform utilizando Terraform como IaC. Diseñé pipelines de CI/CD con Google Cloud Build para despliegues automáticos de microservicios en Cloud Run con zero-downtime. Implementé estrategias de rollback automático, monitoreo con Cloud Monitoring y alertas configuradas por umbrales. El entorno alcanzó 99.99% de disponibilidad mensual en producción con cargas variables.",
+    confidential: true,
+    tags: ["Terraform", "GCP", "Docker", "Cloud Run", "CI/CD", "IaC"],
+    technicalDoc: "https://portfolio-backend-engineer.vercel.app/",
+    demo: "https://portfolio-backend-engineer.vercel.app/",
+    stats: [
+      { label: "Disponibilidad", value: "99.99%", icon: <Cloud size={14} /> },
+      { label: "Entornos gestionados", value: "3+", icon: <Cpu size={14} /> },
+      { label: "Deploy time", value: "< 3 min", icon: <Zap size={14} /> },
+    ],
+    glow: "magenta",
+  },
+  {
+    title: "E2E & Performance Testing Framework – Proyecto Personal",
+    badge: "Personal · Open Source",
+    description:
+      "Diseñé y construí desde cero un framework completo de pruebas automatizadas con Playwright + TypeScript bajo el patrón Page Object Model. Integré pruebas de rendimiento con k6, alcanzando 10.000 requests/segundo con latencia promedio de 32 ms en entornos distribuidos. Desplegué microservicios backend en Node.js sobre Google Cloud Run y configuré pipelines CI/CD con Terraform + GitHub Actions. Resultado: cobertura E2E superior al 85% y reducción del 70% en tiempo de ejecución de pruebas manuales.",
+    tags: ["Playwright", "TypeScript", "k6", "Node.js", "GCP", "Terraform", "GitHub Actions"],
     github: "https://github.com/Dayron321",
+    githubLabel: "Ver repositorio GitHub",
     demo: "https://portfolio-backend-engineer.vercel.app/",
     stats: [
       { label: "Throughput", value: "10k req/s", icon: <Zap size={14} /> },
-      { label: "Manual Reduction", value: "70%", icon: <BarChart3 size={14} /> },
+      { label: "Reducción manual", value: "70%", icon: <BarChart3 size={14} /> },
+      { label: "Cobertura E2E", value: "> 85%", icon: <CheckCircle2 size={14} /> },
     ],
-    glow: "cyan" as const,
+    glow: "cyan",
   },
   {
-    title: "Invoice Automation - La Previsora",
-    description: "Automatización de procesos críticos de facturación procesando más de 200 facturas por ejecución en La Previsora Seguros. Implementación de lógica de validación compleja y generación de reportes automáticos para asegurar la integridad de los datos financieros.",
-    tags: ["Python", "Automation", "SQL", "Excel"],
+    title: "QA Automation Framework – API Testing + Performance + Self-Healing",
+    badge: "Personal · 2026",
+    description:
+      "Framework completo de automatización de pruebas para APIs REST construido con Playwright + TypeScript, pruebas de carga con k6, módulo básico de self-healing para selectores dinámicos y pipeline CI/CD completo con Docker y GitHub Actions. Arquitectura modular orientada a equipos QA con reportes automáticos, integración a Slack y soporte para entornos multi-stage. Diseñado para escalar desde pruebas unitarias hasta integración y performance en un solo comando.",
+    tags: ["Playwright", "TypeScript", "k6", "Docker", "GitHub Actions", "REST API", "Self-Healing"],
     github: "https://github.com/Dayron321",
+    githubLabel: "Ver repositorio GitHub",
     demo: "https://portfolio-backend-engineer.vercel.app/",
     stats: [
-      { label: "Batch Size", value: "200+ inv", icon: <Zap size={14} /> },
-      { label: "Accuracy", value: "99.9%", icon: <BarChart3 size={14} /> },
+      { label: "Cobertura API", value: "> 85%", icon: <Shield size={14} /> },
+      { label: "Throughput", value: "10k req/s", icon: <Zap size={14} /> },
+      { label: "Pipeline", value: "Full CI/CD", icon: <FileCode2 size={14} /> },
     ],
-    glow: "lime" as const,
-  },
-  {
-    title: "System Infrastructure & DevOps",
-    description: "Diseño de arquitecturas en la nube mediante infraestructura como código (IaC). Implementación de microservicios resilientes y pipelines de despliegue continuo para entornos productivos de alta disponibilidad.",
-    tags: ["Terraform", "Docker", "CI/CD", "Cloud Run"],
-    github: "https://github.com/Dayron321",
-    demo: "https://portfolio-backend-engineer.vercel.app/",
-    stats: [
-      { label: "Availability", value: "99.99%", icon: <Cloud size={14} /> },
-    ],
-    glow: "magenta" as const,
+    glow: "amber",
   },
 ];
+
+const glowStyles: Record<string, string> = {
+  cyan: "#00d4ff",
+  lime: "#a3e635",
+  magenta: "#e879f9",
+  amber: "#fbbf24",
+};
 
 export default function Projects() {
   return (
@@ -71,7 +120,7 @@ export default function Projects() {
               <span className="text-white/40">Alto Impacto.</span>
             </motion.h3>
           </div>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -81,37 +130,96 @@ export default function Projects() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <CyberCard glowColor={project.glow} className="h-full flex flex-col p-8">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => {
+            const accentColor = glowStyles[project.glow];
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group relative flex flex-col rounded-sm border border-white/8 bg-white/[0.02] p-8 overflow-hidden transition-all duration-300 hover:border-white/20"
+                style={{
+                  boxShadow: `0 0 0 0 ${accentColor}00`,
+                  transition: "box-shadow 0.3s ease, border-color 0.3s ease",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.boxShadow = `0 0 32px -8px ${accentColor}55`;
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.boxShadow = `0 0 0 0 ${accentColor}00`;
+                }}
+              >
+                {/* Top accent line */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-[2px] opacity-60"
+                  style={{ background: `linear-gradient(90deg, transparent, ${accentColor}, transparent)` }}
+                />
+
+                {/* Header: tags + badge */}
+                <div className="flex flex-wrap justify-between items-start gap-3 mb-5">
+                  <div className="flex flex-wrap gap-1.5">
                     {project.tags.map(tag => (
-                      <span key={tag} className="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-white/5 text-white/40 border border-white/10 uppercase">
+                      <span
+                        key={tag}
+                        className="text-[10px] font-mono px-2 py-0.5 rounded-sm bg-white/5 border border-white/10 uppercase tracking-wide"
+                        style={{ color: accentColor + "cc" }}
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
+                  {project.badge && (
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-sm border whitespace-nowrap"
+                      style={{
+                        borderColor: accentColor + "44",
+                        color: accentColor,
+                        background: accentColor + "11",
+                      }}
+                    >
+                      {project.badge}
+                    </span>
+                  )}
                 </div>
 
-                <h4 className="text-2xl font-bold mb-4 group-hover:text-[#00d4ff] transition-colors">{project.title}</h4>
-                
-                <p className="text-white/60 text-sm leading-relaxed mb-8 flex-grow">
+                {/* Title */}
+                <h4
+                  className="text-xl font-bold mb-3 transition-colors leading-snug"
+                  style={{ color: "#fff" }}
+                >
+                  {project.title}
+                </h4>
+
+                {/* Description */}
+                <p className="text-white/55 text-sm leading-relaxed mb-6 flex-grow">
                   {project.description}
                 </p>
 
+                {/* Confidential note */}
+                {project.confidential && (
+                  <div
+                    className="flex items-start gap-2.5 rounded-sm border p-3 mb-6 text-xs leading-relaxed"
+                    style={{
+                      borderColor: accentColor + "30",
+                      background: accentColor + "08",
+                      color: accentColor + "cc",
+                    }}
+                  >
+                    <Lock size={13} className="mt-0.5 flex-shrink-0" style={{ color: accentColor }} />
+                    <span>
+                      <strong>Nota:</strong> Código fuente confidencial por política de la empresa. Se muestra demo en vivo + documentación técnica detallada.
+                    </span>
+                  </div>
+                )}
+
                 {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-8 pt-6 border-t border-white/5">
+                <div className="grid grid-cols-3 gap-3 mb-6 pt-5 border-t border-white/5">
                   {project.stats.map(stat => (
                     <div key={stat.label}>
-                      <div className="flex items-center gap-1.5 text-[#00d4ff] mb-1">
+                      <div className="flex items-center gap-1.5 mb-1" style={{ color: accentColor }}>
                         {stat.icon}
                         <span className="text-xs font-bold uppercase tracking-wider">{stat.value}</span>
                       </div>
@@ -122,28 +230,66 @@ export default function Projects() {
 
                 {/* Buttons */}
                 <div className="flex flex-col gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase tracking-widest transition-all"
-                  >
-                    <GithubIcon size={14} />
-                    Ver repositorio GitHub
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 py-3 bg-[#00d4ff]/10 hover:bg-[#00d4ff]/20 border border-[#00d4ff]/30 text-[#00d4ff] font-bold text-xs uppercase tracking-widest transition-all"
-                  >
-                    <ExternalLink size={14} />
-                    Ver demo en vivo
-                  </a>
+                  {project.confidential ? (
+                    /* Company projects: single "Ver explicación técnica completa" button */
+                    <a
+                      href={project.technicalDoc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 py-3 font-bold text-xs uppercase tracking-widest transition-all border"
+                      style={{
+                        background: accentColor + "18",
+                        borderColor: accentColor + "50",
+                        color: accentColor,
+                      }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.background = accentColor + "30";
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.background = accentColor + "18";
+                      }}
+                    >
+                      <FileCode2 size={14} />
+                      Ver explicación técnica completa
+                    </a>
+                  ) : (
+                    /* Personal projects: GitHub + Demo */
+                    <>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase tracking-widest transition-all"
+                      >
+                        <GithubIcon size={14} />
+                        {project.githubLabel ?? "Ver repositorio GitHub"}
+                      </a>
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 py-3 font-bold text-xs uppercase tracking-widest transition-all border"
+                        style={{
+                          background: accentColor + "15",
+                          borderColor: accentColor + "40",
+                          color: accentColor,
+                        }}
+                        onMouseEnter={e => {
+                          (e.currentTarget as HTMLElement).style.background = accentColor + "28";
+                        }}
+                        onMouseLeave={e => {
+                          (e.currentTarget as HTMLElement).style.background = accentColor + "15";
+                        }}
+                      >
+                        <ExternalLink size={14} />
+                        Ver demo en vivo
+                      </a>
+                    </>
+                  )}
                 </div>
-              </CyberCard>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
