@@ -1,13 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Terminal } from "lucide-react";
-import { NeonButton } from "@/components/ui/NeonButton";
+import { ArrowRight, Download } from "lucide-react";
+
+function scrollToProjects() {
+  const el = document.getElementById("projects");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function downloadCV() {
+  const link = document.createElement("a");
+  link.href = "/cv-dayron-vera.pdf";
+  link.download = "cv-dayron-vera.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Effects */}
+      {/* Efectos de fondo */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-radial opacity-40" />
         <div className="absolute inset-0 bg-grid opacity-10" />
@@ -15,7 +30,8 @@ export default function Hero() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Status Badge */}
+
+          {/* Badge de estado */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,7 +42,7 @@ export default function Hero() {
             Disponible para trabajar
           </motion.div>
 
-          {/* Name & Title */}
+          {/* Nombre y título */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,11 +53,11 @@ export default function Hero() {
               <span className="text-white/40">Vera Castro</span>
             </h1>
             <p className="text-xl md:text-2xl text-[#00b4ff]/80 font-medium tracking-wide mb-8 font-mono">
-              Software Engineer — Backend & QA Automation
+              Ingeniero de Software — Backend & QA Automation
             </p>
           </motion.div>
 
-          {/* Description */}
+          {/* Descripción */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,7 +68,7 @@ export default function Hero() {
             Transformando pruebas manuales en pipelines CI/CD de alto rendimiento para el software de 2026.
           </motion.p>
 
-          {/* CTAs */}
+          {/* Botones de acción */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,26 +76,28 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="px-8 py-4 bg-[#00b4ff] text-[#0a0a0a] font-bold rounded-sm border border-[#00b4ff] hover:bg-transparent hover:text-[#00b4ff] transition-all duration-300 flex items-center justify-center gap-2 group"
+              type="button"
+              onClick={scrollToProjects}
+              className="px-8 py-4 bg-[#00b4ff] text-[#0a0a0a] font-bold rounded-sm border border-[#00b4ff] hover:bg-transparent hover:text-[#00b4ff] transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
             >
               Ver proyectos
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <a
-              href="/cv-dayron-vera.pdf"
-              download="cv-dayron-vera.pdf"
-              className="px-8 py-4 bg-transparent text-white font-bold rounded-sm border border-white/20 hover:border-[#00d4ff] hover:text-[#00d4ff] transition-all duration-300 flex items-center justify-center gap-2"
+
+            <button
+              type="button"
+              onClick={downloadCV}
+              className="px-8 py-4 bg-transparent text-white font-bold rounded-sm border border-white/20 hover:border-[#00d4ff] hover:text-[#00d4ff] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
               Descargar CV
               <Download size={18} />
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>
 
-      {/* Decorative Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10" />
+      {/* Gradiente decorativo inferior */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-0 pointer-events-none" />
     </section>
   );
 }

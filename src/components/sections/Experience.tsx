@@ -5,13 +5,13 @@ import { Briefcase, GraduationCap, Globe2 } from "lucide-react";
 
 const experience = [
   {
-    role: "QA Engineer / Backend Support",
+    role: "Ingeniero QA / Soporte Backend",
     company: "Glocation",
     period: "Sep 2025 — Mar 2026",
     description: "Lidero la estrategia de automatización de pruebas para plataformas de logística. Diseño de frameworks Playwright de alto rendimiento y ejecución de pruebas de carga críticas.",
   },
   {
-    role: "Backend Developer Intern",
+    role: "Desarrollador Backend (Prácticas)",
     company: "La Previsora Seguros",
     period: "Ago 2024 — Jul 2025",
     description: "Desarrollo de lógica de servidor y automatización de procesos financieros. Implementación de sistemas de facturación masiva y optimización de bases de datos.",

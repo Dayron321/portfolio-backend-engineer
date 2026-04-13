@@ -40,7 +40,7 @@ export default function CodeDemo() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-[#00d4ff] uppercase mb-4">Engineering Demo</h2>
+            <h2 className="text-sm font-bold tracking-widest text-[#00d4ff] uppercase mb-4">Demo de Ingeniería</h2>
             <h3 className="text-4xl md:text-5xl font-black mb-6">
               Pruebas de <span className="text-white/40">Carga en Tiempo Real.</span>
             </h3>
@@ -94,19 +94,19 @@ export default function CodeDemo() {
                 >
                   <div className="flex items-center gap-3 text-[#00ff88] mb-2">
                     <CheckCircle2 size={16} />
-                    <span className="font-bold text-sm uppercase tracking-wider">All tests passed</span>
+                    <span className="font-bold text-sm uppercase tracking-wider">Todas las pruebas pasaron</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-[11px] font-mono uppercase tracking-widest text-white/40">
                     <div className="flex flex-col gap-1">
-                      <span className="text-[#00d4ff]/40">Environment</span>
+                      <span className="text-[#00d4ff]/40">Entorno</span>
                       <span className="text-white/80">Google Cloud Run</span>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="text-[#00d4ff]/40">Latency p95</span>
+                      <span className="text-[#00d4ff]/40">Latencia p95</span>
                       <span className="text-[#00ff88]">32.4ms</span>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <span className="text-[#00d4ff]/40">Requests</span>
+                      <span className="text-[#00d4ff]/40">Solicitudes</span>
                       <span className="text-[#00ff88]">10,000 req/s</span>
                     </div>
                   </div>
@@ -122,7 +122,7 @@ export default function CodeDemo() {
               </div>
               <div className="flex items-center gap-2">
                 <Zap size={10} className="text-[#00d4ff]" />
-                <span>Ready to deploy</span>
+                <span>Listo para despliegue</span>
               </div>
             </div>
           </div>
