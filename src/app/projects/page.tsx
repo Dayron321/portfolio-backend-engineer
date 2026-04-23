@@ -105,7 +105,7 @@ test.describe('Authentication Flows', () => {
     await expect(page).toHaveURL(/.*\\/dashboard/);
   });
 });`,
-    githubLink: "https://github.com/dayronvera-GL/PruebaDevOps",
+    githubLink: "https://github.com/Dayron321/qa-automation-framework",
     glowColor: "cyan",
   },
   {

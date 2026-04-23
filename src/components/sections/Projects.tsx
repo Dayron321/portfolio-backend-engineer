@@ -50,16 +50,16 @@ const projects: ProjectType[] = [
   },
   {
     title: "Framework E2E & Performance Testing – Proyecto Personal",
-    badge: "Personal · Open Source",
+    badge: "Personal · CI/CD Activo ✓",
     description:
-      "Diseñé y construí desde cero un framework completo de pruebas automatizadas con Playwright + TypeScript bajo el patrón Page Object Model. Integré pruebas de rendimiento con k6, alcanzando 10.000 requests/segundo con latencia promedio de 32 ms en entornos distribuidos. Desplegué microservicios backend en Node.js sobre Google Cloud Run y configuré pipelines CI/CD con Terraform + GitHub Actions. Resultado: cobertura E2E superior al 85% y reducción del 70% en tiempo de ejecución de pruebas manuales.",
+      "Construí desde cero un framework E2E completo con Playwright + TypeScript bajo el patrón Page Object Model. 100 tests automatizados corriendo en 5 browsers simultáneos (Chrome, Firefox, Safari, Mobile Chrome y Mobile Safari) con pipeline CI/CD en GitHub Actions. Cada push dispara los tests automáticamente — badge verde en el README como evidencia en vivo. Tiempo total de ejecución: 1 minuto 17 segundos para validar el sistema completo.",
     tags: ["Playwright", "TypeScript", "k6", "Node.js", "GCP", "Terraform", "GitHub Actions"],
-    github: "https://github.com/Dayron321",
-    demo: "https://portfolio-backend-engineer.vercel.app/",
+    github: "https://github.com/Dayron321/qa-automation-framework",
+    demo: "https://dayron321.github.io/qa-automation-framework/",
     stats: [
-      { label: "Rendimiento", value: "10k req/s", icon: <Zap size={14} /> },
-      { label: "Reducción manual", value: "70%", icon: <BarChart3 size={14} /> },
-      { label: "Cobertura E2E", value: "> 85%", icon: <CheckCircle2 size={14} /> },
+      { label: "Tests pasando", value: "100/100", icon: <Zap size={14} /> },
+      { label: "Browsers", value: "5 simultáneos", icon: <BarChart3 size={14} /> },
+      { label: "Tiempo CI", value: "1m 17s", icon: <CheckCircle2 size={14} /> },
     ],
     glow: "cyan",
   },
