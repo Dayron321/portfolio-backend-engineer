@@ -21,6 +21,25 @@ type ProjectType = {
 
 const projects: ProjectType[] = [
   {
+    title: "QualityGuard API — Sistema de Citas Médicas",
+    badge: "Personal · CI/CD Activo ✓",
+    description:
+      "API REST para gestión de citas médicas con framework de pruebas integrado. " +
+      "Resuelve el doble booking y la falta de trazabilidad en clínicas medianas. " +
+      "Arquitectura con bloqueo transaccional FOR UPDATE en PostgreSQL para evitar " +
+      "race conditions. Tests de contrato con Playwright + pruebas de carga k6 " +
+      "con 500 usuarios concurrentes. Pipeline CI/CD activo en GitHub Actions.",
+    tags: ["Node.js", "Express", "PostgreSQL", "Playwright", "k6", "Docker", "GitHub Actions", "Swagger"],
+    github: "https://github.com/Dayron321/qualityguard-api",
+    demo: "https://github.com/Dayron321/qualityguard-api",
+    stats: [
+      { label: "Contract Tests", value: "15", icon: <CheckCircle2 size={14} /> },
+      { label: "Latencia p95", value: "<200ms", icon: <Zap size={14} /> },
+      { label: "Carga máx.", value: "500 VU", icon: <BarChart3 size={14} /> },
+    ],
+    glow: "cyan" as const,
+  },
+  {
     title: "Automatización de Facturación – La Previsora Seguros",
     badge: "Empresa · Producción",
     description:
